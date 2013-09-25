@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>User Profile for <%= @user.username %></h1>
+
+<table>  
+   <tr>
+      <td>
+        User: <%= @user.username %>
+      </td>
+   </tr>  
+   <tr>
+      <td>
+        Created: <%= @user.created_at %>
+      </td>
+   </tr>  
+   <tr>
+      <td>
+        About: 
+      </td>
+      <td>
+        <a href="/allposts/<%= @user.id %>"> Submissions</a>
+      </td>
+      <td>
+        <a href="/allcomments/<%= @user.id %>">Comments</a>
+      </td>
+   </tr>  
+</table>
+</div>

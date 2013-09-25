@@ -1,0 +1,24 @@
+1 Gemfile:             gem 'bcrypt-ruby'
+2 Environment:         require 'bcrypt'
+3 User Migration:      password_hash or password_digest
+4 User Model Example: 
+
+    require 'bcrypt'
+
+        class User < ActiveRecord::Base
+          include BCrypt
+
+          has_many :this
+          has_many :that
+          validates :email, uniqueness: true
+          
+          def password
+            @password ||= Password.new(password_hash)
+          end
+
+          def password=(new_password)
+            @password = Password.create(new_password)
+            self.password_hash = @password
+          end
+        end
+
