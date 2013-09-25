@@ -5,7 +5,7 @@
   <% @user_comments.each do |comment| %>
    <tr>
       <td>
-        <%= comment.comment_text %> at <%= comment.created_at.strftime("%a, %b %Y") %><br>
+        "<%= comment.comment_text %>" on <%= comment.created_at.strftime("%a, %b %Y") %><br>
       </td>
       <td> 
          Post URL: <a href= '<%= Post.find(comment.post_id).url %>'><%= Post.find(comment.post_id).url %></a>

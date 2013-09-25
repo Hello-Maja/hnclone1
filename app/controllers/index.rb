@@ -28,8 +28,9 @@ get '/allposts/:user_id' do
   erb :allposts
 end
 
-get 'post/:post_id' do
+get '/post/:post_id' do
   @post = Post.find(params[:post_id])
+  @comments = @post.comments
   erb :singlepost
 end
 
@@ -47,10 +48,11 @@ end
 # POST ==========================================
 
 post '/login' do
+
 end
 
 post '/post/:post_id' do
-  #passing in comment
+  
 end
 
 post '/newpost' do
