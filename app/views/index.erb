@@ -2,13 +2,13 @@
   <h1>All Posts</h1>
 
 <table>  
-  <% @allposts.each do |post| %>
+  <% @allposts.reverse.each do |post| %>
    <tr>
       <td>
         <a href="<%= post.url %>"><%= post.url %></a>
       </td>
       <td> 
-         posted by: <a href='/profile/<%=post.user_id%>'><%= post.user_id %></a>
+         posted by: <a href='/profile/<%=post.user_id%>'><%= post.user.username %></a>
       </td>
       <td>
         comments: <a href='/post/<%=post.id%>'><%= post.comments.count %></a></td>

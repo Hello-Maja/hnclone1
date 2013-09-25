@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Create a Post...or don't.  Whatever.</h2>
+
+    <form action="/newpost/<%= @user_id %>" method='POST'>
+      Title: <input type="text" name="title">
+      URL: <input type="url" name="url">
+      <input type="submit" value="Submit" >
+    </form>
+
+</div>

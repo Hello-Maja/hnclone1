@@ -1,13 +1,13 @@
 <div class="container">
   <h2><a href='<%=@post.url%>'><%=@post.title%></a></h2>
 
-    <form action="/" type='textarea' method='POST'>
-      <textarea rows="4" cols="50"></textarea>
-      <input type="submit" value="Submit" >
+    <form action="/post/<%= @post.id %>" type='textarea' method='POST'>
+      <textarea rows="4" cols="50" name="comment_text"></textarea>
+      <input type="submit" value="Comment" >
     </form>
 
 <table>  
-  <% @comments.each do |comment| %>
+  <% @comments.reverse.each do |comment| %>
    <tr>
       <td>
         <%= comment.comment_text %> at <%= comment.created_at.strftime("%a, %b %Y") %> by <%=comment.user.username%><br>

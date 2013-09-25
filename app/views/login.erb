@@ -1,6 +1,6 @@
 <h2> Login </h2>
 
-<form action="/newuser" method="Post">
+<form action="/login" method="POST">
   Email<input type="email" name="email"><br>
   Password<input type="password" name="password"><br>
   <input type="submit" value="submit" id="submit">
@@ -8,9 +8,10 @@
 
 <h2> Sign Up</h2>
 
-<form action="/newuser" method="Post">
-  Email<input type="email" name="email"><br>
-  Password<input type="password" name="password"><br>
+<form action="/newuser" method="POST">
+  Username<input type="username" name="newuser[username]"><br>
+  Email<input type="email" name="newuser[email]"><br>
+  Password<input type="password" name="newuser[password]"><br>
   <input type="submit" value="submit" id="submit">
 </form>
 

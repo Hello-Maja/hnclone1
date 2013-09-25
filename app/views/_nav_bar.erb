@@ -1,0 +1,17 @@
+<div class="navbar">
+ <ul>
+  <li>
+    <a href='/'>Zebra News</a>
+  </li> 
+  <li>
+    <a href='/newpost'>Submit</a>
+  </li> 
+  <li>
+    <% if current_user %>
+      <a href='/logout'>Logout</a>
+    <% else %>
+      <a href='/login'>Login</a>
+    <% end %>
+  </li> 
+  </ul>
+</div>
