@@ -1,3 +1,10 @@
+THE TROOF ABOUT STRFTIME
+
+http://www.tutorialspoint.com/ruby/ruby_date_time.htm
+
+
+BCRYPT
+
 1 Gemfile:             gem 'bcrypt-ruby'
 2 Environment:         require 'bcrypt'
 3 User Migration:      password_hash or password_digest

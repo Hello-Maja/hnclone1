@@ -17,12 +17,20 @@ get '/profile/:user_id' do
 end
 
 get '/allcomments/:user_id' do
+  @user = User.find(params[:user_id])
+  @user_comments = @user.comments
+  erb :allcoms
 end
 
 get '/allposts/:user_id' do
+  @user = User.find(params[:user_id])
+  @user_posts = @user.posts
+  erb :allposts
 end
 
 get 'post/:post_id' do
+  @post = Post.find(params[:post_id])
+  erb :singlepost
 end
 
 get '/newpost' do

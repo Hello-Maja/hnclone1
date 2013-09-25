@@ -1,16 +1,18 @@
 <div class="container">
-  <h1>All Posts</h1>
+  <h1>All Comments for <%= @user.username %></h1>
 
 <table>  
-  <%= @post.each do |post| %>
+  <% @user_comments.each do |comment| %>
    <tr>
       <td>
-        <a href="<%= post.url %>"><%= post.url %></a>
+        <%= comment.comment_text %> at <%= comment.created_at.strftime("%a, %b %Y") %><br>
       </td>
       <td> 
-         posted by: <a href=<'/profile/<%=post.user_id%>'><%= post.user_id %></a>
+         Post URL: <a href= '<%= Post.find(comment.post_id).url %>'><%= Post.find(comment.post_id).url %></a>
       </td>
    </tr>  
   <% end %>  
 </table>
 </div>
+
+<!-- totally awesome! -->

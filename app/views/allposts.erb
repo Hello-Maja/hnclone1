@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>All Comments for <%= @user.username %></h1>
+
+<table>  
+  <% @user_posts.each do |post| %>
+   <tr>
+      <td> 
+         El posto!: <a href= '<%= post.url %>'><%= post.title %></a>
+      </td>
+      <td>
+        ~at <%= post.created_at.strftime("%a, %b %Y") %><br>
+      </td>
+
+   </tr>  
+  <% end %>  
+</table>
+</div>
+
+<!-- totally awesome! -->
